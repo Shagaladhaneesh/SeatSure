@@ -1,12 +1,20 @@
+# ---------- Build Stage ----------
+FROM eclipse-temurin:21-jdk AS build
 
-# Base Image
-FROM eclipse-temurin:21-jdk
-
-# Working Directory inside the container
 WORKDIR /app
 
-# Copy the JAR into the container
-COPY target/*.jar app.jar
+COPY . .
 
-# Command to start the application
+RUN chmod +x mvnw
+RUN ./mvnw clean package -DskipTests
+
+# ---------- Runtime Stage ----------
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+
+COPY --from=build /app/target/*.jar app.jar
+
+EXPOSE 8080
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
