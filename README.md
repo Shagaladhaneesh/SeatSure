@@ -243,6 +243,6 @@ http://localhost:4200
 
 # 👨‍💻 Author
 
-**Dhaneesh Pawan**
+**S.Dhaneeshwor Pawan**
 
 GitHub: https://github.com/Shagaladhaneesh
