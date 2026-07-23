@@ -1,0 +1,63 @@
+<div class="container">
+
+  <h1 class="page-title">
+    🎟️ Select Your Seats
+  </h1>
+
+  <p class="subtitle">
+    Choose your preferred seats and proceed to booking.
+  </p>
+
+  <div class="screen">
+    SCREEN
+  </div>
+
+  <div class="legend">
+
+    <div class="legend-item">
+      <span class="box available"></span>
+      <span>Available</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="box selected"></span>
+      <span>Selected</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="box booked"></span>
+      <span>Booked</span>
+    </div>
+
+  </div>
+
+  <div class="seat-grid">
+
+    <button
+      *ngFor="let seat of seats"
+      class="seat"
+      [class.available]="seat.status === 'AVAILABLE' && !isSelected(seat)"
+      [class.booked]="seat.status === 'BOOKED'"
+      [class.selected]="isSelected(seat)"
+      [disabled]="seat.status === 'BOOKED'"
+      (click)="toggleSeat(seat)">
+
+      {{ seat.seatLabel }}
+
+    </button>
+
+  </div>
+
+  <div class="book-section">
+
+    <button
+      class="btn btn-success"
+      (click)="bookSeats()">
+
+      🎟️ Book Selected Seats
+
+    </button>
+
+  </div>
+
+</div>

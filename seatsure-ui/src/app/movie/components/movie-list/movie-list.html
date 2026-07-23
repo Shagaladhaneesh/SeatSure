@@ -1,0 +1,39 @@
+<div class="container">
+
+  <h1 class="page-title">
+
+    🎬 Now Showing
+
+  </h1>
+
+  <div
+    class="movie-card card"
+    *ngFor="let movie of movies">
+
+    <h2>{{ movie.title }}</h2>
+
+    <div class="movie-details">
+
+      <p><strong>🎭 Genre:</strong> {{ movie.genre }}</p>
+
+      <p><strong>🌐 Language:</strong> {{ movie.language }}</p>
+
+      <p><strong>⏱ Duration:</strong> {{ movie.durationInMinutes }} mins</p>
+
+      <p><strong>🔞 Certificate:</strong> {{ movie.certificate }}</p>
+
+      <p><strong>📅 Release:</strong> {{ movie.releaseDate }}</p>
+
+    </div>
+
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/movies', movie.id, 'shows']">
+
+      View Shows
+
+    </button>
+
+  </div>
+
+</div>

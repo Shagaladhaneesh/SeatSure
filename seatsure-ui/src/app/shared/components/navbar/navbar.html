@@ -1,0 +1,45 @@
+<nav class="navbar">
+
+  <div
+    class="logo"
+    (click)="goHome()">
+
+    <span class="logo-icon">🎬</span>
+
+    <span class="logo-text">
+
+        SeatSure
+
+    </span>
+
+  </div>
+
+  <div class="nav-links">
+
+    <a
+      routerLink="/movies"
+      routerLinkActive="active">
+
+      Movies
+
+    </a>
+
+    <a
+      routerLink="/booking-history"
+      routerLinkActive="active">
+
+      My Bookings
+
+    </a>
+
+    <button
+      class="btn btn-danger"
+      (click)="logout()">
+
+      Logout
+
+    </button>
+
+  </div>
+
+</nav>

@@ -1,0 +1,69 @@
+.booking-card{
+
+    margin-bottom:25px;
+
+    transition:.25s;
+
+}
+
+.booking-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.booking-card h2{
+
+    color:var(--primary-color);
+
+    margin-bottom:15px;
+
+}
+
+.booking-details{
+
+    margin-bottom:20px;
+
+}
+
+.booking-details p{
+
+    margin-bottom:10px;
+
+    color:#555;
+
+}
+
+.status{
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-left:8px;
+
+}
+
+.booked{
+
+    background:#42d32f;
+
+}
+
+.cancelled{
+
+    background:#d32f2f;
+
+}
+
+.booking-card button{
+
+    width:180px;
+
+}

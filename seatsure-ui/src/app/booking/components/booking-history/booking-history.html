@@ -1,0 +1,51 @@
+<div class="container">
+
+  <h1 class="page-title">
+
+    📖 My Bookings
+
+  </h1>
+
+  <div
+    class="booking-card card"
+    *ngFor="let booking of bookings">
+
+    <h2>{{ booking.movieName }}</h2>
+
+    <div class="booking-details">
+
+      <p><strong>🏢 Theatre:</strong> {{ booking.theatreName }}</p>
+
+      <p><strong>🕒 Show Time:</strong> {{ booking.showTime }}</p>
+
+      <p><strong>💰 Total Amount:</strong> ₹{{ booking.totalAmount }}</p>
+
+      <p>
+
+        <strong>Status:</strong>
+
+        <span
+          class="status"
+          [class.booked]="booking.status === 'CONFIRMED'"
+          [class.cancelled]="booking.status === 'CANCELLED'">
+
+                    {{ booking.status }}
+
+                </span>
+
+      </p>
+
+    </div>
+
+    <button
+
+      class="btn btn-danger"
+      (click)="cancelBooking(booking.bookingId)">
+
+      Cancel Booking
+
+    </button>
+
+  </div>
+
+</div>

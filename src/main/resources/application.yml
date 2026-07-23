@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: seatsure
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:Dhaneesh@123}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+show:
+  cleaning-buffer-minutes: 15
+
+jwt:
+  secret: 7WQwDq4L6wP9nF2mX8aJ5rT1yH3zK9cV6bL4sN8eP2qR7uM1xY5tA3gH6jF9dK2
+  expiration: 86400000

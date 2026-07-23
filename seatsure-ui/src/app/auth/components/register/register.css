@@ -1,0 +1,25 @@
+.card{
+
+    width:400px;
+
+    margin:50px auto;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-top:5px;
+
+    margin-bottom:15px;
+
+}
+
+button{
+
+    width:100%;
+
+}

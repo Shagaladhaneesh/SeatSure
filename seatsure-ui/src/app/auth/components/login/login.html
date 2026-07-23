@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="card">
+    <mat-card>
+
+      <h1 class="page-title">
+
+        🎬 SeatSure
+
+      </h1>
+
+      <h3>
+
+        Welcome Back
+
+      </h3>
+
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="login()">
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>Email</mat-label>
+
+          <input
+            matInput
+            formControlName="email">
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+          <mat-label>Password</mat-label>
+
+          <input
+            matInput
+            type="password"
+            formControlName="password">
+
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+            class ="btn btn-primary">
+          Login
+
+        </button>
+
+      </form>
+      <p>
+
+        Don't have an account?
+
+        <a routerLink="/register">
+
+          Register
+
+        </a>
+
+      </p>
+
+    </mat-card>
+
+
+  </div></div>
+
+
