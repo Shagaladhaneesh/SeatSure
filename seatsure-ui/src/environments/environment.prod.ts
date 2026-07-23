@@ -2,6 +2,6 @@ export const environment = {
 
   production: true,
 
-  apiUrl: 'http://localhost:8080/api'
+  private apiUrl = "https://seat-sure-backend.onrender.com";
 
 };
