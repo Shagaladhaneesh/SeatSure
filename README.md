@@ -189,36 +189,45 @@ http://localhost:4200
 
 # 📷 Screenshots
 
-## Login
+## 🔐 Login
 
-(Add Screenshot)
-
-## Register
-
-(Add Screenshot)
-
-## Dashboard
-
-(Add Screenshot)
-
-## Movies
-
-(Add Screenshot)
-
-## Shows
-
-(Add Screenshot)
-
-## Seat Selection
-
-(Add Screenshot)
-
-## Booking History
-
-(Add Screenshot)
+![Login](screenshots/login.png)
 
 ---
 
+## 📝 Register
+
+![Register](screenshots/regisster.png)
+
+---
+
+## 🏠 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 🎬 Movies
+
+![Movies](screenshots/movies.png)
+
+---
+
+## 🎭 Shows
+
+![Shows](screenshots/shows.png)
+
+---
+
+## 💺 Seat Selection
+
+![Seat Selection](screenshots/select_seats.png)
+
+---
+
+## 📖 Booking History
+
+![Booking History](screenshots/bookings.png)
 # 🔮 Future Enhancements
 
 - Redis Caching
