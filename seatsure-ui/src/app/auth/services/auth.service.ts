@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 import { environment } from '../../../environments/environment';
 import { LoginRequest } from '../models/login-request';
 import { LoginResponse } from '../models/login-response';
@@ -13,8 +14,7 @@ export class AuthService {
 
   private http = inject(HttpClient);
 
-  private readonly API =
-    'http://localhost:8080/api/auth';
+  private readonly API = `${environment.apiUrl}/api/auth`;
 
   login(request: LoginRequest): Observable<LoginResponse> {
 
@@ -24,41 +24,47 @@ export class AuthService {
     );
 
   }
-saveToken(token: string): void {
 
-  localStorage.setItem("token", token);
-
-}
-getToken(): string | null {
-
-  return localStorage.getItem("token");
-
-}
-
-logout(): void {
-
-  localStorage.removeItem("token");
-
-}
-getMovies() {
-  return this.http.get("http://localhost:8080/api/movies");
-}
-
-register(request: RegisterRequest) {
+  register(request: RegisterRequest) {
 
     return this.http.post(
 
-        `${environment.apiUrl}/auth/register`,
+      `${this.API}/register`,
 
-        {
+      {
 
-            ...request,
+        ...request,
 
-            role: 'USER'
+        role: 'USER'
 
-        }
+      }
 
     );
 
-}
+  }
+
+  saveToken(token: string): void {
+
+    localStorage.setItem("token", token);
+
+  }
+
+  getToken(): string | null {
+
+    return localStorage.getItem("token");
+
+  }
+
+  logout(): void {
+
+    localStorage.removeItem("token");
+
+  }
+
+  getMovies() {
+
+    return this.http.get(`${environment.apiUrl}/api/movies`);
+
+  }
+
 }
