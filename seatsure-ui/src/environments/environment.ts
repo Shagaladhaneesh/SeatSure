@@ -1,7 +1,7 @@
 export const environment = {
 
-  production: true,
+  production: false,
 
-  apiUrl: "https://seat-sure-backend.onrender.com"
+  apiUrl: "http://localhost:8080"
 
 };

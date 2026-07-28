@@ -12,7 +12,7 @@ export class MovieService {
 
   private http = inject(HttpClient);
 
-  private readonly API = `${environment.apiUrl}/movies`;
+  private readonly API = `${environment.apiUrl}/api/movies`;
 
   getMovies(): Observable<Movie[]> {
 

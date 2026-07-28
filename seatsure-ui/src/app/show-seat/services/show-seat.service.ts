@@ -13,7 +13,7 @@ export class ShowSeatService {
   private http = inject(HttpClient);
 
   private readonly API =
-  `${environment.apiUrl}/shows`;
+  `${environment.apiUrl}/api/shows`;
 
   getSeats(showId:number):Observable<ShowSeat[]>{
 

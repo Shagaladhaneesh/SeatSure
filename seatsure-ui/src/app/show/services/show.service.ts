@@ -13,7 +13,7 @@ export class ShowService {
   private http = inject(HttpClient);
 
   private readonly API =
-  `${environment.apiUrl}/shows`;
+  `${environment.apiUrl}/api/shows`;
 
   getShowsByMovie(movieId:number):Observable<Show[]>{
 

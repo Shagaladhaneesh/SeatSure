@@ -15,7 +15,7 @@ export class BookingService {
   private http = inject(HttpClient);
 
   private readonly API =
-   `${environment.apiUrl}/bookings`;
+   `${environment.apiUrl}/api/bookings`;
 
   bookSeats(request:CreateBookingRequest)
       :Observable<BookingResponse>{
