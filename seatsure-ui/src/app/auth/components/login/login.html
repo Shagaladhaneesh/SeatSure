@@ -1,18 +1,15 @@
 <div class="container">
 
   <div class="card">
+
     <mat-card>
 
       <h1 class="page-title">
-
         🎬 SeatSure
-
       </h1>
 
       <h3>
-
         Welcome Back
-
       </h3>
 
       <form
@@ -27,6 +24,14 @@
             matInput
             formControlName="email">
 
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Enter a valid email
+          </mat-error>
+
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -38,33 +43,46 @@
             type="password"
             formControlName="password">
 
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+
         </mat-form-field>
+
+        <!-- Login Error -->
+        <div
+          class="error-message"
+          *ngIf="errorMessage">
+
+          {{ errorMessage }}
+
+        </div>
 
         <button
           mat-raised-button
           color="primary"
           type="submit"
-            class ="btn btn-primary">
-          Login
+          class="btn btn-primary"
+          [disabled]="loginForm.invalid || isLoading">
+
+          {{ isLoading ? 'Logging in...' : 'Login' }}
 
         </button>
 
       </form>
+
       <p>
 
         Don't have an account?
 
         <a routerLink="/register">
-
           Register
-
         </a>
 
       </p>
 
     </mat-card>
 
+  </div>
 
-  </div></div>
-
-
+</div>
